@@ -227,6 +227,7 @@ abort_multipart_upload(Client, Bucket, Key, Input0, Options) ->
     HeadersMapping = [
                        {<<"x-amz-request-payer">>, <<"RequestPayer">>}
                      ],
+
     {Headers, Input1} = aws_request:build_headers(HeadersMapping, Input0),
 
     QueryMapping = [
@@ -344,6 +345,7 @@ complete_multipart_upload(Client, Bucket, Key, Input0, Options) ->
     HeadersMapping = [
                        {<<"x-amz-request-payer">>, <<"RequestPayer">>}
                      ],
+
     {Headers, Input1} = aws_request:build_headers(HeadersMapping, Input0),
 
     QueryMapping = [
@@ -1056,7 +1058,7 @@ create_multipart_upload(Client, Bucket, Key, Input0, Options) ->
 %% delete markers) in the bucket must be deleted before the bucket itself can
 %% be deleted.
 %%
-%% <p class="title"> <b>Related Resources</b>
+%% <p class="title"> <b>Related Resources</b> </p>
 %%
 %% <ul> <li>
 %%
@@ -1132,7 +1134,7 @@ delete_bucket_analytics_configuration(Client, Bucket, Input0, Options) ->
 %% Cross-Origin Resource Sharing</a> in the <i>Amazon Simple Storage Service
 %% Developer Guide</i>.
 %%
-%% <p class="title"> <b>Related Resources:</b>
+%% <p class="title"> <b>Related Resources:</b> </p>
 %%
 %% <ul> <li>
 %%
@@ -1171,7 +1173,7 @@ delete_bucket_cors(Client, Bucket, Input0, Options) ->
 %% Access Permissions to your Amazon S3 Resources</a> in the <i>Amazon Simple
 %% Storage Service Developer Guide</i>.
 %%
-%% <p class="title"> <b>Related Resources</b>
+%% <p class="title"> <b>Related Resources</b> </p>
 %%
 %% <ul> <li> <a>PutBucketEncryption</a>
 %%
@@ -1744,7 +1746,7 @@ delete_public_access_block(Client, Bucket, Input0, Options) ->
 %% href="https://docs.aws.amazon.com/AmazonS3/latest/dev/transfer-acceleration.html">Transfer
 %% Acceleration</a> in the Amazon Simple Storage Service Developer Guide.
 %%
-%% <p class="title"> <b>Related Resources</b>
+%% <p class="title"> <b>Related Resources</b> </p>
 %%
 %% <ul> <li> <a>PutBucketAccelerateConfiguration</a>
 %%
@@ -1770,7 +1772,7 @@ get_bucket_accelerate_configuration(Client, Bucket, Options)
 %% permission is granted to the anonymous user, you can return the ACL of the
 %% bucket without using an authorization header.
 %%
-%% <p class="title"> <b>Related Resources</b>
+%% <p class="title"> <b>Related Resources</b> </p>
 %%
 %% <ul> <li>
 %%
@@ -1808,7 +1810,7 @@ get_bucket_acl(Client, Bucket, Options)
 %% S3 Analytics – Storage Class Analysis</a> in the <i>Amazon Simple Storage
 %% Service Developer Guide</i>.
 %%
-%% <p class="title"> <b>Related Resources</b>
+%% <p class="title"> <b>Related Resources</b> </p>
 %%
 %% <ul> <li>
 %%
@@ -3841,7 +3843,7 @@ put_bucket_accelerate_configuration(Client, Bucket, Input0, Options) ->
 %% href="https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region">Regions
 %% and Endpoints</a> in the AWS General Reference.
 %%
-%% </note> </li> </ul> <p class="title"> <b>Related Resources</b>
+%% </note> </li> </ul> <p class="title"> <b>Related Resources</b> </p>
 %%
 %% <ul> <li> <a>CreateBucket</a>
 %%
@@ -3904,7 +3906,7 @@ put_bucket_acl(Client, Bucket, Input0, Options) ->
 %% href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Managing
 %% Access Permissions to Your Amazon S3 Resources</a>.
 %%
-%% <p class="title"> <b>Special Errors</b>
+%% <p class="title"> <b>Special Errors</b> </p>
 %%
 %% <ul> <li> <ul> <li> <i>HTTP Error: HTTP 400 Bad Request</i>
 %%
@@ -3927,7 +3929,7 @@ put_bucket_acl(Client, Bucket, Input0, Options) ->
 %% do not have the s3:PutAnalyticsConfiguration bucket permission to set the
 %% configuration on the bucket.</i>
 %%
-%% </li> </ul> </li> </ul> <p class="title"> <b>Related Resources</b>
+%% </li> </ul> </li> </ul> <p class="title"> <b>Related Resources</b> </p>
 %%
 %% <ul> <li>
 %%
@@ -3994,7 +3996,7 @@ put_bucket_analytics_configuration(Client, Bucket, Input0, Options) ->
 %% Cross-Origin Resource Sharing</a> in the <i>Amazon Simple Storage Service
 %% Developer Guide</i>.
 %%
-%% <p class="title"> <b>Related Resources</b>
+%% <p class="title"> <b>Related Resources</b> </p>
 %%
 %% <ul> <li> <a>GetBucketCors</a>
 %%
@@ -4045,7 +4047,7 @@ put_bucket_cors(Client, Bucket, Input0, Options) ->
 %% Access Permissions to Your Amazon S3 Resources</a> in the Amazon Simple
 %% Storage Service Developer Guide.
 %%
-%% <p class="title"> <b>Related Resources</b>
+%% <p class="title"> <b>Related Resources</b> </p>
 %%
 %% <ul> <li> <a>GetBucketEncryption</a>
 %%
@@ -4105,22 +4107,22 @@ put_bucket_encryption(Client, Bucket, Input0, Options) ->
 %% Access Permissions to Your Amazon S3 Resources</a> in the Amazon Simple
 %% Storage Service Developer Guide.
 %%
-%% <p class="title"> <b>Special Errors</b>
+%% <p class="title"> <b>Special Errors</b> </p>
 %%
-%% <ul> <li> <p class="title"> <b>HTTP 400 Bad Request Error</b>
+%% <ul> <li> <p class="title"> <b>HTTP 400 Bad Request Error</b> </p>
 %%
 %% <ul> <li> <i>Code:</i> InvalidArgument
 %%
 %% </li> <li> <i>Cause:</i> Invalid Argument
 %%
-%% </li> </ul> </li> <li> <p class="title"> <b>HTTP 400 Bad Request Error</b>
+%% </li> </ul> </li> <li> <p class="title"> <b>HTTP 400 Bad Request Error</b> </p>
 %%
 %% <ul> <li> <i>Code:</i> TooManyConfigurations
 %%
 %% </li> <li> <i>Cause:</i> You are attempting to create a new configuration
 %% but have already reached the 1,000-configuration limit.
 %%
-%% </li> </ul> </li> <li> <p class="title"> <b>HTTP 403 Forbidden Error</b>
+%% </li> </ul> </li> <li> <p class="title"> <b>HTTP 403 Forbidden Error</b> </p>
 %%
 %% <ul> <li> <i>Code:</i> AccessDenied
 %%
@@ -4128,7 +4130,7 @@ put_bucket_encryption(Client, Bucket, Input0, Options) ->
 %% you do not have the <code>s3:PutInventoryConfiguration</code> bucket
 %% permission to set the configuration on the bucket.
 %%
-%% </li> </ul> </li> </ul> <p class="title"> <b>Related Resources</b>
+%% </li> </ul> </li> </ul> <p class="title"> <b>Related Resources</b> </p>
 %%
 %% <ul> <li> <a>GetBucketInventoryConfiguration</a>
 %%
@@ -4194,7 +4196,7 @@ put_bucket_inventory_configuration(Client, Bucket, Input0, Options) ->
 %% href="https://docs.aws.amazon.com/AmazonS3/latest/dev/intro-lifecycle-rules.html#lifecycle-configuration-examples">Examples
 %% of Lifecycle Configuration</a>.
 %%
-%% <p class="title"> <b>Related Resources</b>
+%% <p class="title"> <b>Related Resources</b> </p>
 %%
 %% <ul> <li> <a>GetBucketLifecycle</a>(Deprecated)
 %%
@@ -4822,7 +4824,7 @@ put_bucket_tagging(Client, Bucket, Input0, Options) ->
 %% href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lifecycle-mgmt.html#lifecycle-and-other-bucket-config">Lifecycle
 %% and Versioning</a>.
 %%
-%% </important> <p class="title"> <b>Related Resources</b>
+%% </important> <p class="title"> <b>Related Resources</b> </p>
 %%
 %% <ul> <li> <a>CreateBucket</a>
 %%
@@ -5006,7 +5008,7 @@ put_bucket_website(Client, Bucket, Input0, Options) ->
 %% Objects to Versioning Enabled Buckets</a>. For information about returning
 %% the versioning state of a bucket, see <a>GetBucketVersioning</a>.
 %%
-%% <p class="title"> <b>Related Resources</b>
+%% <p class="title"> <b>Related Resources</b> </p>
 %%
 %% <ul> <li> <a>CopyObject</a>
 %%
@@ -5217,7 +5219,7 @@ put_object(Client, Bucket, Key, Input0, Options) ->
 %% sets the ACL of the current version of an object. To set the ACL of a
 %% different version, use the <code>versionId</code> subresource.
 %%
-%% <p class="title"> <b>Related Resources</b>
+%% <p class="title"> <b>Related Resources</b> </p>
 %%
 %% <ul> <li> <a>CopyObject</a>
 %%
@@ -5267,7 +5269,7 @@ put_object_acl(Client, Bucket, Key, Input0, Options) ->
 
 %% @doc Applies a Legal Hold configuration to the specified object.
 %%
-%% <p class="title"> <b>Related Resources</b>
+%% <p class="title"> <b>Related Resources</b> </p>
 %%
 %% <ul> <li> <a
 %% href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html">Locking
@@ -5316,7 +5318,7 @@ put_object_legal_hold(Client, Bucket, Key, Input0, Options) ->
 %% <note> <code>DefaultRetention</code> requires either Days or Years. You
 %% can't specify both at the same time.
 %%
-%% </note> <p class="title"> <b>Related Resources</b>
+%% </note> <p class="title"> <b>Related Resources</b> </p>
 %%
 %% <ul> <li> <a
 %% href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html">Locking
@@ -5360,7 +5362,7 @@ put_object_lock_configuration(Client, Bucket, Input0, Options) ->
 
 %% @doc Places an Object Retention configuration on an object.
 %%
-%% <p class="title"> <b>Related Resources</b>
+%% <p class="title"> <b>Related Resources</b> </p>
 %%
 %% <ul> <li> <a
 %% href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-lock.html">Locking
@@ -5429,9 +5431,9 @@ put_object_retention(Client, Bucket, Key, Input0, Options) ->
 %% href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-tagging.html">Object
 %% Tagging</a>.
 %%
-%% <p class="title"> <b>Special Errors</b>
+%% <p class="title"> <b>Special Errors</b> </p>
 %%
-%% <ul> <li> <p class="title"> <b/>
+%% <ul> <li> <p class="title"> <b/> </p>
 %%
 %% <ul> <li> <i>Code: InvalidTagError </i>
 %%
@@ -5441,7 +5443,7 @@ put_object_retention(Client, Bucket, Key, Input0, Options) ->
 %% href="https://docs.aws.amazon.com/AmazonS3/latest/dev/object-tagging.html">Object
 %% Tagging</a>.</i>
 %%
-%% </li> </ul> </li> <li> <p class="title"> <b/>
+%% </li> </ul> </li> <li> <p class="title"> <b/> </p>
 %%
 %% <ul> <li> <i>Code: MalformedXMLError </i>
 %%
@@ -5457,7 +5459,7 @@ put_object_retention(Client, Bucket, Key, Input0, Options) ->
 %% </li> <li> <i>Cause: The service was unable to apply the provided tag to
 %% the object.</i>
 %%
-%% </li> </ul> </li> </ul> <p class="title"> <b>Related Resources</b>
+%% </li> </ul> </li> </ul> <p class="title"> <b>Related Resources</b> </p>
 %%
 %% <ul> <li> <a>GetObjectTagging</a>
 %%
@@ -5516,7 +5518,7 @@ put_object_tagging(Client, Bucket, Key, Input0, Options) ->
 %% href="https://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-block-public-access.html#access-control-block-public-access-policy-status">The
 %% Meaning of "Public"</a>.
 %%
-%% <p class="title"> <b>Related Resources</b>
+%% <p class="title"> <b>Related Resources</b> </p>
 %%
 %% <ul> <li> <a>GetPublicAccessBlock</a>
 %%
@@ -5756,9 +5758,9 @@ put_public_access_block(Client, Bucket, Input0, Options) ->
 %% </li> <li> If the object copy is previously restored, Amazon S3 returns
 %% <code>200 OK</code> in the response.
 %%
-%% </li> </ul> <p class="title"> <b>Special Errors</b>
+%% </li> </ul> <p class="title"> <b>Special Errors</b> </p>
 %%
-%% <ul> <li> <p class="title"> <b/>
+%% <ul> <li> <p class="title"> <b/> </p>
 %%
 %% <ul> <li> <i>Code: RestoreAlreadyInProgress</i>
 %%
@@ -5769,7 +5771,7 @@ put_public_access_block(Client, Bucket, Input0, Options) ->
 %%
 %% </li> <li> <i>SOAP Fault Code Prefix: Client</i>
 %%
-%% </li> </ul> </li> <li> <p class="title"> <b/>
+%% </li> </ul> </li> <li> <p class="title"> <b/> </p>
 %%
 %% <ul> <li> <i>Code: GlacierExpeditedRetrievalNotAvailable</i>
 %%
@@ -5782,7 +5784,7 @@ put_public_access_block(Client, Bucket, Input0, Options) ->
 %%
 %% </li> <li> <i>SOAP Fault Code Prefix: N/A</i>
 %%
-%% </li> </ul> </li> </ul> <p class="title"> <b>Related Resources</b>
+%% </li> </ul> </li> </ul> <p class="title"> <b>Related Resources</b> </p>
 %%
 %% <ul> <li> <a>PutBucketLifecycleConfiguration</a>
 %%
@@ -5923,7 +5925,7 @@ restore_object(Client, Bucket, Key, Input0, Options) ->
 %% For a list of special errors for this operation, see
 %% <a>SelectObjectContentErrorCodeList</a>
 %%
-%% <p class="title"> <b>Related Resources</b>
+%% <p class="title"> <b>Related Resources</b> </p>
 %%
 %% <ul> <li> <a>GetObject</a>
 %%
@@ -6022,9 +6024,9 @@ select_object_content(Client, Bucket, Key, Input0, Options) ->
 %%
 %% </li> <li> x-amz-server-side​-encryption​-customer-key-MD5
 %%
-%% </li> </ul> <p class="title"> <b>Special Errors</b>
+%% </li> </ul> <p class="title"> <b>Special Errors</b> </p>
 %%
-%% <ul> <li> <p class="title"> <b/>
+%% <ul> <li> <p class="title"> <b/> </p>
 %%
 %% <ul> <li> <i>Code: NoSuchUpload</i>
 %%
@@ -6036,7 +6038,7 @@ select_object_content(Client, Bucket, Key, Input0, Options) ->
 %%
 %% </li> <li> <i>SOAP Fault Code Prefix: Client</i>
 %%
-%% </li> </ul> </li> </ul> <p class="title"> <b>Related Resources</b>
+%% </li> </ul> </li> </ul> <p class="title"> <b>Related Resources</b> </p>
 %%
 %% <ul> <li> <a>CreateMultipartUpload</a>
 %%
@@ -6187,9 +6189,9 @@ upload_part(Client, Bucket, Key, Input0, Options) ->
 %%
 %% <code>x-amz-copy-source: /bucket/object?versionId=version id</code>
 %%
-%% <p class="title"> <b>Special Errors</b>
+%% <p class="title"> <b>Special Errors</b> </p>
 %%
-%% <ul> <li> <p class="title"> <b/>
+%% <ul> <li> <p class="title"> <b/> </p>
 %%
 %% <ul> <li> <i>Code: NoSuchUpload</i>
 %%
@@ -6199,7 +6201,7 @@ upload_part(Client, Bucket, Key, Input0, Options) ->
 %%
 %% </li> <li> <i>HTTP Status Code: 404 Not Found</i>
 %%
-%% </li> </ul> </li> <li> <p class="title"> <b/>
+%% </li> </ul> </li> <li> <p class="title"> <b/> </p>
 %%
 %% <ul> <li> <i>Code: InvalidRequest</i>
 %%
@@ -6208,7 +6210,7 @@ upload_part(Client, Bucket, Key, Input0, Options) ->
 %%
 %% </li> <li> <i>HTTP Status Code: 400 Bad Request</i>
 %%
-%% </li> </ul> </li> </ul> <p class="title"> <b>Related Resources</b>
+%% </li> </ul> </li> </ul> <p class="title"> <b>Related Resources</b> </p>
 %%
 %% <ul> <li> <a>CreateMultipartUpload</a>
 %%
@@ -6298,6 +6300,7 @@ request(Client, Method, Path, Query, Headers0, Input, Options, SuccessStatusCode
     Payload = encode_payload(Input),
     MethodBin = aws_request:method_to_binary(Method),
     SignedHeaders = aws_request:sign_request(Client1, MethodBin, URL, Headers1, Payload),
+    erlang:display(URL),
     Response = hackney:request(Method, URL, SignedHeaders, Payload, Options),
     handle_response(Response, SuccessStatusCode).
 
